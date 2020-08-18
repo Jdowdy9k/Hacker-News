@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { getSearchResults } from './action';
 
 function Search(props) {
-    console.log(props);
+   
     return (
         <div>
             <input onChange={ e => onInputChange(e, props) }/>
