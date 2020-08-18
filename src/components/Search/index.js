@@ -1,20 +1,24 @@
 import React from 'react';
-import axios from 'axios';
+import { connect } from 'react-redux';
+import { getSearchResults } from './action';
 
-
-function Search () {
+function Search(props) {
+    console.log(props);
     return (
-        <>
-            <input onChange={ onInputChange }/>
-        </>
+        <div>
+            <input onChange={ e => onInputChange(e, props) }/>
+        </div>
     )
 }
 
-async function onInputChange(e) {
-    const api = 'http://hn.algolia.com/api/v1/search?query='+ e.target.value ;
-    const data = await axios.get(api);
-    console.log(data.data.hits)
+async function onInputChange(e, props) {
+    if (e.target.value.trim() !== "") {
+        props.getSearchResults(e.target.value);
+    }
 }
 
+const mapDispatchToProps = {
+    getSearchResults
+};
 
-export default Search;
+export default connect(null, mapDispatchToProps)(Search);

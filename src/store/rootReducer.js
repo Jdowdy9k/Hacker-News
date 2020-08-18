@@ -2,6 +2,6 @@ import { combineReducers } from 'redux';
 import SearchReducer from '../components/Search/redux/SearchReducer'
 
 
-export default combineReducers( reducers: {
+export default combineReducers( combineReducers, {
     search: SearchReducer
 });
