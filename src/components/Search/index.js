@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 
 function Search () {
@@ -9,13 +10,11 @@ function Search () {
     )
 }
 
-function onInputChange(e) {
-    const api = 'http://hn.algolia.com/api/v1/search?query=${ e.target.value }';
+async function onInputChange(e) {
+    const api = 'http://hn.algolia.com/api/v1/search?query='+ e.target.value ;
+    const data = await axios.get(api);
+    console.log(data.data.hits)
 }
 
-
-//function callApi() {
-//    const api = 'http://hn.algolia.com/api/v1/search?query= ${ e.target.value }';
-//}
 
 export default Search;
