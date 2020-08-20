@@ -8,4 +8,4 @@ export const getSearchResults = value => ({
 export const setSearchResults = results => ({
     type: types.setSearchResults,
     results
-})
+});

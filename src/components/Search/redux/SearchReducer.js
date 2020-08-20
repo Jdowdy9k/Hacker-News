@@ -9,7 +9,7 @@ const SearchReducer = (state = initialState, action) => {
     switch(action.type) {
         case types.setSearchResults: {
             console.log(action)
-            return state.merge( Collection, {
+            return state.merge(Collection, {
                 searchResults: fromJS(action.results)
             });
         }
