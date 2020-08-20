@@ -1,5 +1,5 @@
 import types from '../types'
-import { Map, fromJS, Collection } from 'immutable';
+import { Map, fromJS } from 'immutable';
 
 const initialState = Map ({
     searchResults: []
@@ -9,7 +9,7 @@ const SearchReducer = (state = initialState, action) => {
     switch(action.type) {
         case types.setSearchResults: {
             console.log(action)
-            return state.merge(Collection, {
+            return state.merge({
                 searchResults: fromJS(action.results)
             });
         }
