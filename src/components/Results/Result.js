@@ -5,10 +5,17 @@ function Result({ result }) {
     return (
         <>
            <div>
-               <h1> {result.toJS().title}</h1>
-               <h2> {result.toJS().url}</h2>
-               <h2> {result.toJS().author}</h2>
+               <h2> {result.toJS().title}
+               <a href={result.toJS().url} target="_blank"> {result.toJS().url}</a>
+               </h2>
            </div>
+           <div>
+                <a> {result.toJS().points} </a> |
+                <a> {result.toJS().author} </a> |
+                <a> {result.toJS().created_at} </a> |
+                <a> {result.toJS().num_comments} </a>
+            
+            </div>
         </>
     )
 }
