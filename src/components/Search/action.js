@@ -9,3 +9,8 @@ export const setSearchResults = results => ({
     type: types.setSearchResults,
     results
 });
+
+export const addSearchResults = saveResults => ({
+    type: types.addSearchResults,
+    saveResults
+})
