@@ -10,7 +10,7 @@ export const setSearchResults = results => ({
     results
 });
 
-export const addSearchResults = saveResults => ({
+export const addSearchResults = terms => ({
     type: types.addSearchResults,
-    saveResults
+    terms
 })

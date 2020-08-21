@@ -1,5 +1,5 @@
 import types from '../types'
-import { takeLatest, put, takeLeading } from 'redux-saga/effects';
+import { takeLatest, put} from 'redux-saga/effects';
 import { setSearchResults } from '../action';
 import axios from 'axios';
 
