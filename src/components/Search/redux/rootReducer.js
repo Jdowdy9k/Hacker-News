@@ -3,10 +3,10 @@ import { Map, fromJS } from 'immutable';
 
 const initialState = Map({
     searchResults: [],
-    history: []
+    history: [1,2,3]
 });
 
-const SearchReducer = (state = initialState, action) => {
+const rootReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.setSearchResults: {
             console.log(action)
@@ -27,4 +27,4 @@ const SearchReducer = (state = initialState, action) => {
 
 
 
-export default SearchReducer;
+export default rootReducer;
