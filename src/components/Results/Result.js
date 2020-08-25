@@ -5,7 +5,7 @@ function Result({ result }) {
         <>
            <div>
                <h2> {result.toJS().title}
-               <a href={result.toJS().url} target="_blank"> {result.toJS().url}</a>
+               <a href={result.toJS().url}> {result.toJS().url}</a>
                </h2>
            </div>
            <div>
