@@ -1,5 +1,5 @@
 import types from '../types'
-import { put, takeEvery} from 'redux-saga/effects';
+import { put, takeEvery, takeLatest} from 'redux-saga/effects';
 import { setSearchResults } from '../action';
 import axios from 'axios';
 
@@ -13,7 +13,7 @@ function* setSearch({ value }) {
 }
 
 function* watchSearch() {
-    yield takeEvery(types.watchGetSearchResults, setSearch)
+    yield takeLatest(types.watchGetSearchResults, setSearch)
 }
 
 

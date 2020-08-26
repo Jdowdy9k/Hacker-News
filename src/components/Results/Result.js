@@ -9,10 +9,12 @@ function Result({ result }) {
                </h2>
            </div>
            <div>
-                <a> {result.toJS().points} </a> |
-                <a> {result.toJS().author} </a> |
-                <a> {result.toJS().created_at} </a> |
-                <a> {result.toJS().num_comments} </a>
+                <h4> 
+                 {result.toJS().points} | 
+                  {result.toJS().author} | 
+                  {result.toJS().created_at} | 
+                  {result.toJS().num_comments} 
+                </h4>
             
             </div>
         </>

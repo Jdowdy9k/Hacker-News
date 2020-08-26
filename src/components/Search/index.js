@@ -10,14 +10,14 @@ class SearchBar extends Component {
         currentInput: ''
     }
 
-    //handles new inputs and updates the current search
+    
     handleInputChange = (event) => {
         let newInput = event.target.value;
         this.setState({
             currentInput: newInput
         });
     }
-    //handles the submit function and starts the results process
+    
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.getSearchResults(this.state.currentInput)
@@ -48,8 +48,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getSearchResults: (query) => dispatch(getSearchResults(query)),
-        addSearchResults: (terms) => dispatch(addSearchResults(terms))
+        getSearchResults: (value) => dispatch(getSearchResults(value)),
+        addSearchResults: (terms) => { dispatch(addSearchResults(terms)) }
     }
 }
 

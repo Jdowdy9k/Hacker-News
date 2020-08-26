@@ -18,7 +18,7 @@ const rootReducer = (state = initialState, action) => {
             console.log(action)
             return state.merge({
                 history: fromJS(action.terms)
-            })
+            });
         }
         default: {
             return state;
