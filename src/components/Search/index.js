@@ -49,7 +49,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         getSearchResults: (value) => dispatch(getSearchResults(value)),
-        addSearchResults: (terms) => { dispatch(addSearchResults(terms)) }
+        addSearchResults: (terms) => dispatch(addSearchResults(terms))
     }
 }
 
