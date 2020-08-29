@@ -24,4 +24,4 @@ All information is saved and stored in the Redux state of the application, which
 
 [Justin Dowdy](https://github.com/Jdowdy9k) |
 --- |
-[LinkedIn](https://www.linkedin.com/in/jdowdy9k/) |
+[LinkedIn](https://www.linkedin.com/in/jdowdy9k/) | 
