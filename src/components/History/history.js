@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect} from 'react';
+import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import { fetchResults } from '../../actions/action'
@@ -14,24 +14,24 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
     console.log(state)
     return {
-        history: state
+        searches: state.searches
     }
 };
 
-class historyDiv extends Component {
+class History extends Component {
 
     //function to pull the previous search
     previousSearch = (event) => {
-        this.props.fetchData(event.target.id)
+        this.props.fetchResults(event.target.id)
     }
 
     render() {
-        const { history } = this.props;
+        const { searches } = this.props;
         return (
             <div>
                 <h2>Search History</h2>
                 {
-                    history.map(search => {
+                    searches.map(search => {
                         return (
                             <ul key={search}>
                             <Button variant='warning' id={search} key={search} onClick={this.previousSearch}>{search}</Button>
@@ -45,4 +45,4 @@ class historyDiv extends Component {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(historyDiv);
+export default connect(mapStateToProps, mapDispatchToProps)(History);

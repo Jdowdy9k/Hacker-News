@@ -1,18 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Search from './components/Search'
-import Results from './components/Results'
-import HistoryPage from './components/History/history'
-import { Provider } from 'react-redux';
-import store from './store/createStore';
+import History from './components/History/history'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Result from './components/Results/Result';
 
-function App() {
-  return (
-    <Provider store={ store }>
-        <Search />
-        <HistoryPage />
-        <Results />
-    </Provider>
-  );
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="container mt-12 text-center">
+          <div className="column">
+
+            <Search />
+
+            <History />
+
+            <Result />
+
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getSearchResults, addSearchResults } from './action';
+import { fetchResults, search } from '../../actions/action'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 
-class SearchBar extends Component {
+class Search extends Component {
     state = {
         currentInput: ''
     }
@@ -20,8 +20,8 @@ class SearchBar extends Component {
     
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.getSearchResults(this.state.currentInput)
-        this.props.addSearchResults(this.state.currentInput)
+        this.props.search(this.state.currentInput)
+        this.props.fetchResults(this.state.currentInput)
     }
 
     render() {
@@ -48,10 +48,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getSearchResults: (value) => dispatch(getSearchResults(value)),
-        addSearchResults: (terms) => dispatch(addSearchResults(terms))
+        search: (value) => { dispatch(search(value)) },
+        fetchResults: (terms) => dispatch(fetchResults(terms))
     }
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
