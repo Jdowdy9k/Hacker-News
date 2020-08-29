@@ -20,7 +20,22 @@ class Results extends Component {
                 <div className="list-group p-2">
                     {results.map(result => {
                         return (
-                            <a href={result.url} className="list-group-item mt-2" key={result.objectID} target="_blank"><div className="text-dark">{result.title}</div><br></br><h4>Author:</h4> {result.author}</a>
+                            <>
+                                <div>
+                                    <h2> {result.title}
+                                        <a href={result.url}> {result.url}</a>
+                                    </h2>
+                                </div>
+                                <div>
+                                    <h4>
+                                        {result.points} |
+                                        {result.author} |
+                                        {result.created_at} |
+                                        {result.num_comments}
+                                    </h4>
+
+                                </div>
+                            </>
                         )
                     })}
                 </div>

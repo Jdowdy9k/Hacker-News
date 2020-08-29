@@ -33,9 +33,9 @@ class History extends Component {
                 {
                     searches.map(search => {
                         return (
-                            <ul key={search}>
+                            <div key={search}>
                             <Button variant='warning' id={search} key={search} onClick={this.previousSearch}>{search}</Button>
-                            </ul>
+                            </div>
                         )
                     })
                 }
