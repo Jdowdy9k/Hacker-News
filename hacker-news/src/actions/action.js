@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-//Async function passing in query to retrieve results 
 
 export const fetchResults = (query) => {
     return async (dispatch) => {

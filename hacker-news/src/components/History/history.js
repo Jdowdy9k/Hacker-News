@@ -12,7 +12,6 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
     return {
         searches: state.searches
     }
@@ -20,7 +19,6 @@ const mapStateToProps = (state) => {
 
 class History extends Component {
 
-    //function to pull the previous search
     previousSearch = (event) => {
         this.props.fetchResults(event.target.id)
     }

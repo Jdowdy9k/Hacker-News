@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Search from './components/Search'
 import History from './components/History/history'
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Result from './components/Results/Result';
 
 
