@@ -1,10 +1,12 @@
 # HNA-Search-App
 
+Deployed app: [https://jdowdy9k.github.io/Hacker-News/](https://jdowdy9k.github.io/Hacker-News/)
+
 Email me at: [Jdowdy9k@gmail.com](mailto:Jdowdy9k@gmail.com)
 
 ## Setup
 
-1. Clone the application locally by running `git clone https://github.com/JmCole19/HNA-Search-App.git`
+1. Clone the application locally by running `git clone https://github.com/Jdowdy9k/Hacker-News.git`
 2. install any necessary dependenices using `npm i`
 3. Once inside the application, use `npm start` to start the application locally. This will start the application in a browser!
 
